@@ -18,4 +18,4 @@ for item in l[0:ix]:
 
 
 
-print(f"\nUsing C-SCAN the total seek time is {t}")
+print(f"\nUsing C-LOOK the total seek time is {t}")
