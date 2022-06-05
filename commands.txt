@@ -1,0 +1,96 @@
+1.	Display top 10 processes in descending order
+	
+	ps -eo pid,%mem,%cpu | tail
+
+2.	Display processes with highest memory usage.
+	
+	ps -eo pid,%mem,%cpu --sort=-%mem | head
+
+3.	Display current logged in user and logname
+	
+	whoami
+	who
+
+4.	Display current shell, home directory, operating system type, current path setting, current working directory.
+
+	echo $SHELL
+	pwd
+	uname
+
+5.	Display OS version, release number, kernel version
+	
+	uname -r
+
+6.	Write a command to display the first 15 columns from each line in the file
+	
+	cut -c 1-15 file.txt
+
+7.	cut specified columns from a file and display them	
+	
+	cut -d':' -f1 file.txt
+
+8.	Sort given file ignoring upper and lower case
+
+	sort -uf file.txt
+
+9.	Displays only directories in current working directory.
+
+	ls -d /*
+
+10.	copying files from one place to another,	
+	
+	cp x.txt new/
+
+11.	moving files from one place to another.
+
+	mv x.txt new/
+
+12.	Removing specific directory with various options
+
+	rmdir
+
+13.	list the numbers of users currently login in the system and then sort it.
+	
+	who | sort
+
+14.	Merge two files into one file
+	
+	cat f.txt f1.txt > merged.txt
+
+15.	changes the access mode of one file
+	
+	chmod a-wx file.txt
+	(a=all users , w = write , x = exec , - = remove)
+
+16.	display the last ten lines of the file.
+
+	tail -n10 merged.txt
+
+17.	to locate files in a directory and in a subdirectory.
+
+	find . -name merged.txt
+
+18.	This displays the contents of all files having a name starting with ap followed by any number of characters.
+
+	ls -d ap*
+
+19.	Rename any file aaa to aaa.aa1, where aa1 is the user login name.
+	
+	mv merged.txt merged${USER}.txt
+
+20.	Write a command to search the word ‘picture’ in the file and if found, the lines containing it would be displayed on the screen.
+	
+	grep picture.txt
+
+21.	Write a command to search for all occurrences of ‘Rebecca’ as well as ‘rebecca’ in file and display the lines which contain one of these words.
+
+	grep -i rebecca merged.txt
+
+22.	Write a command to search all four-letter words whose first letter is a ‘b’ and last letter, a ‘k’.
+	
+	grep b..k merged.txt
+
+
+23.	Write a command to see only those lines which do not contain the search patterns
+	
+	grep -v apple merged.txt
