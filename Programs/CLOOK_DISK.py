@@ -1,11 +1,8 @@
 last_loc = int(input("Enter initial location of arm : "))
-max_loc = int(input("Enter Max location of arm : "))
 l =  [int(item) for item in input("Enter The Locations : ").split()]
 t=0
 
 l.append(last_loc)
-l.append(max_loc)
-l.append(0)
 l=sorted(set(l))
 ix = l.index(last_loc)
 
